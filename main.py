@@ -62,7 +62,7 @@ player_list = []
 def deminish_queue():
     global queue_length, sp
     while True:
-        time.sleep(10)
+        time.sleep(250)
         if queue_length > 0:
             queue_length -= 1
 
