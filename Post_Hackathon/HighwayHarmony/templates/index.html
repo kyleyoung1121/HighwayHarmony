@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highway Harmony</title>
+    <style>
+      body {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .dropdown-container {
+        display: flex;
+        align-items: center;
+      }
+      .dropdown {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #444;
+        margin-right: 10px;
+      }
+      .input-text {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #444;
+        width: 300px;
+        margin-bottom: 16px;
+      }
+      .add-button,
+      .remove-button,
+      .refresh-button {
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        margin-left: 10px;
+      }
+      .add-button:hover,
+      .remove-button:hover,
+      .refresh-button:hover {
+        background-color: #3e8e41;
+      }
+      .add-button:active,
+      .remove-button:active,
+      .refresh-button:active {
+        background-color: #3e8e41;
+        transform: translateY(1px);
+      }
+      .or-text {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      hr {
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Highway Harmony</h1>
+      <hr>
+    </header>
+    <div class="container">
+      <section>
+        <h2>Select User</h2>
+        <div class="dropdown-container">
+          <select class="dropdown">
+            <option value="user1">User 1</option>
+            <option value="user2">User 2</option>
+            <option value="user3">User 3</option>
+          </select>
+          <button type="button" class="refresh-button">Refresh</button>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <section>
+        <h2>Add/Remove User</h2>
+        <form>
+          <input type="text" class="input-text" placeholder="Enter Codename"/>
+          <button type="submit" class="add-button">Add</button>
+          <button type="button" class="remove-button">Remove</button>
+        </form>
+      </section>
+    </div>
+    <hr>
+    <section>
+      <h2>Add song by name</h2>
+      <form>
+        <input type="text" class="input-text" placeholder="Enter song name" />
+        <button type="submit" class="add-button">Add</button>
+      </form>
+      <p class="or-text">or...</p>
+      <h2>Add songs from playlist</h2>
+      <form>
+        <input type="text" class="input-text" placeholder="Enter playlist URL"/>
+        <button type="submit" class="add-button">Add</button>
+      </form>
+      <hr>
+    </section>
+  </body>
+</html>

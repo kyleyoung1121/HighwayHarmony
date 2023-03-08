@@ -1,0 +1,6 @@
+runtime: python39
+
+env_variables:
+  SPOTIPY_CLIENT_ID: "c89aa974a8134e6d9e46a8c0267c2775"
+  SPOTIPY_CLIENT_SECRET: "bd4807a0895949008b99c7c921098d9e"
+  SPOTIPY_REDIRECT_URI: "https://google.com"
