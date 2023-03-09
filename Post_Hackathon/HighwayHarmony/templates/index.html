@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highway Harmony</title>
+    <style>
+      body {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .dropdown {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #444;
+        margin-left: 10px;
+      }
+      .input-text {
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 4px;
+        border: none;
+        background-color: #f8f8f8;
+        color: #444;
+        width: 300px;
+        margin-bottom: 16px;
+      }
+      .add-button,
+      .remove-button,
+      .refresh-button {
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        margin-left: 10px;
+      }
+      .add-button:hover,
+      .remove-button:hover,
+      .refresh-button:hover {
+        background-color: #3e8e41;
+      }
+      .add-button:active,
+      .remove-button:active,
+      .refresh-button:active {
+        background-color: #3e8e41;
+        transform: translateY(1px);
+      }
+      .or-text {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      hr {
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Highway Harmony</h1>
+      <hr>
+    </header>
+    <div class="container">
+      <section>
+        <h2>Add/Remove User</h2>
+        <form action="/webpage_addremove_user/" method="post">
+          <input name = "addremove_user_field" type="text" class="input-text" placeholder="Enter Codename"/>
+          <button name="two_buttons" value="add" type="submit" class="add-button">Add</button>
+          <button name="two_buttons" value="remove" type="submit" class="remove-button">Remove</button>
+        </form>
+      </section>
+    </div>
+    <hr>
+    <section>
+      <h2>Add song by name</h2>
+      <form action="/webpage_add_song/" method="post">
+        <input name = "add_song_field" type="text" class="input-text" placeholder="Enter song name" />
+        <select name = "users_dropdown" class="dropdown">
+          {% for user in users %}
+            <option value="{{ user.name }}">{{ user.name }}</option>
+          {% endfor %}
+        </select>
+        <button name = "add_song_button" type="submit" class="add-button">Add</button>
+      </form>
+      <p class="or-text">or...</p>
+      <h2>Add songs from playlist</h2>
+      <form action="/webpage_add_playlist/" method="post">
+        <input name = "add_playlist_field" type="text" class="input-text" placeholder="Enter playlist URL"/>
+        <select name = "users_dropdown" class="dropdown">
+          {% for user in users %}
+            <option value="{{ user.name }}">{{ user.name }}</option>
+          {% endfor %}
+        </select>
+        <button name = "add_playlist_button"type="submit" class="add-button">Add</button>
+      </form>
+      <hr>
+    </section>
+  </body>
+</html>
